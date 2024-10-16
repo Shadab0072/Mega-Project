@@ -1,7 +1,11 @@
 import dbConnection from './db/db.js'
 import {app} from './app.js'
-//import dotenv from 'dotenv'
-//dotenv.config()
+import dotenv from 'dotenv'
+dotenv.config({
+    path: './.env'
+})
+
+
 
 
 dbConnection()
@@ -13,5 +17,3 @@ dbConnection()
 .catch((error)=>{
     console.log(error, "error on index.js at dbconnection()")
 })
-
-
